@@ -1,4 +1,10 @@
 {
+  "name": "test-kafka-nodejs",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node main.mjs"
+  },
+  "private": true,
   "dependencies": {
     "kafka-node": "^5.0.0",
     "kafkajs": "^2.2.4",
