@@ -1,3 +1,7 @@
+# Team mitglieder
+Balint Taschner
+Raphael Michl
+
 # Topic idea
 we will have a scraper that gets data from skyscanner and pushes it into the "trips" topic for now. <br>
 We have not planned any more replicas then 1 for now. <br>
