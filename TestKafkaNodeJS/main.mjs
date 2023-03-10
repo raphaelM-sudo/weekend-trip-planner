@@ -1,15 +1,16 @@
 import moment from 'moment';
-import { Kafka } from 'kafkajs';
+import pkg from 'kafkajs';
+const { Kafka, Partitioners } = pkg;
 
 const kafka = new Kafka({
   clientId: 'my-app',
   brokers: ['localhost:9092']
 });
 
-const mainTopic = 'main';
+const mainTopic = 'trips';
 
 async function sendObject(topic, object) {
-  const producer = kafka.producer();
+  const producer = kafka.producer({ createPartitioner: Partitioners.LegacyPartitioner });
 
   await producer.connect();
 
